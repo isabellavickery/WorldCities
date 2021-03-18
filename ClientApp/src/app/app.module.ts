@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
+import { CitiesComponent } from './cities/cities.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
+    CitiesComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -21,6 +23,7 @@ import { HomeComponent } from './home/home.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'cities', component: CitiesComponent },
     ])
   ],
   providers: [],
